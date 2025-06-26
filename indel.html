@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabiduría Filosófica VE </title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --accent1: #e74c3c;
+            --accent2: #2ecc71;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .philosophers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .philosopher-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .philosopher-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .philosopher-header {
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .socrates { background-color: var(--accent1); }
+        .platon { background-color: var(--secondary); }
+        .aristoteles { background-color: var(--accent2); }
+        
+        h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .philosopher-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: -50px auto 1rem;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .philosopher-content {
+            padding: 1.5rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            position: relative;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .quote:before {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            top: -1rem;
+            left: 0.5rem;
+            opacity: 0.2;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            color: white;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .philosophers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sabiduría Eterna</h1>
+            <p class="subtitle">Pensamientos de los grandes filósofos de la antigüedad</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="philosophers">
+            <!-- Tarjeta de Sócrates -->
+            <div class="philosopher-card">
+                <div class="philosopher-header socrates">
+                    <h2>Sócrates</h2>
+                    <p>(470 a.C. - 399 a.C.)</p>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Socrates.png" alt="Sócrates" class="philosopher-img">
+                <div class="philosopher-content">
+                    <div class="quote">
+                        Solo sé que no sé nada. La verdadera sabiduría está en reconocer la propia ignorancia.
+                    </div>
+                    <p><strong>Método:</strong> Mayéutica (parto de ideas)</p>
+                    <p><strong>Influencia:</strong> Fundador de la filosofía occidental</p>
+                    <p><strong>Enseñanza:</strong> El autoconocimiento como camino a la virtud</p>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Platón -->
+            <div class="philosopher-card">
+                <div class="philosopher-header platon">
+                    <h2>Platón</h2>
+                    <p>(427 a.C. - 347 a.C.)</p>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Platon.png" alt="Platón" class="philosopher-img">
+                <div class="philosopher-content">
+                    <div class="quote">
+                        La medida de un hombre es lo que hace con el poder. El hombre que hace que todo lo que lleve a la felicidad dependa de él mismo, y no de los demás, ha adoptado el mejor plan para vivir feliz.
+                    </div>
+                    <p><strong>Obra principal:</strong> La República</p>
+                    <p><strong>Concepto clave:</strong> Teoría de las Ideas</p>
+                    <p><strong>Fundó:</strong> La Academia de Atenas</p>
+                </div>
+            </div>
+            
+            <!-- Tarjeta de Aristóteles -->
+            <div class="philosopher-card">
+                <div class="philosopher-header aristoteles">
+                    <h2>Aristóteles</h2>
+                    <p>(384 a.C. - 322 a.C.)</p>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Aristotle_Altemps_Inv8575.jpg" alt="Aristóteles" class="philosopher-img">
+                <div class="philosopher-content">
+                    <div class="quote">
+                        La excelencia no es un acto, sino un hábito. Somos lo que hacemos repetidamente. La felicidad depende de nosotros mismos.
+                    </div>
+                    <p><strong>Obra principal:</strong> Ética a Nicómaco</p>
+                    <p><strong>Concepto clave:</strong> Virtud como término medio</p>
+                    <p><strong>Fundó:</strong> El Liceo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>"La filosofía es la ciencia que complica las cosas que todo el mundo sabe" </p>
+            <p> Daniela 2025 |Monagas - Venezuela </p>
+        </div>
+    </footer>
+</body>
+</html>
